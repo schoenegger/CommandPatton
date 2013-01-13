@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CommandPatton;
 
-namespace CommandPatton
+namespace Befehl
 {
     abstract class Lichtkommando : Befehl
     {

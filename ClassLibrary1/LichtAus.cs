@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CommandPatton;
 
-namespace CommandPatton
+namespace Befehl
 {
-    class LichtEin : Lichtkommando
+    class LichtAus : Lichtkommando
     {
-
         public override void BefehleDurchführen(Steuerelemente dasZuSteuerndeSteuerelement)
         {
             //Überprufen ob das Steuerelement auf ein Objekt vom Typ Beleuchtung gecastet werden kann
-            if ((typeof(Beleuchtung)).IsAssignableFrom(dasZuSteuerndeSteuerelement.GetType()))              
+            if ((typeof(Beleuchtung)).IsAssignableFrom(dasZuSteuerndeSteuerelement.GetType()))
             {
-                ((Beleuchtung)dasZuSteuerndeSteuerelement).LichtEin();//In Objekt Beleuchtung Cast-en
+                ((Beleuchtung)dasZuSteuerndeSteuerelement).LichtAus();//In Objekt Beleuchtung Cast-en
             }
         }
 
@@ -24,4 +24,3 @@ namespace CommandPatton
         }
     }
 }
- 

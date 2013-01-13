@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CommandPatton.Befehle;
+using CommandPatton.Steuerungselemente;
 
 namespace CommandPatton
 {
@@ -19,6 +21,9 @@ namespace CommandPatton
         {
             Raum1.fuegeSteuerelementHinzu(new Beleuchtung());
             Raum1.fuegeSteuerelementHinzu(new Beleuchtung());
+            Raum1.fuegeSteuerelementHinzu(new Heizung());
+            Raum1.fuegeSteuerelementHinzu(new Heizung());
+            Raum1.fuegeSteuerelementHinzu(new Heizung());
 
            MainWindow.AusgabeTextblock.Text = Raum1.ToString();
 
@@ -26,6 +31,7 @@ namespace CommandPatton
 
             Befehlsliste.Add(new LichtEin());
             Befehlsliste.Add(new LichtEin());
+            Befehlsliste.Add(new HeizungEin());
 
             Raum1.BefuelleBefehlslisteFuerSteuerelemente(Befehlsliste);
 
@@ -33,6 +39,14 @@ namespace CommandPatton
 
             Befehlsliste.Add(new LichtAus());
             Raum1.BefuelleBefehlslisteFuerSteuerelemente(Befehlsliste);
+
+
+            MainWindow.AusgabeTextblock.Text += Raum1.ToString();
+
+            Befehlsliste.Add(new HeizungAus());
+            Befehlsliste.Add(new LichtEin());
+            Raum1.BefuelleBefehlslisteFuerSteuerelemente(Befehlsliste);
+
             MainWindow.AusgabeTextblock.Text += Raum1.ToString();
         }
 

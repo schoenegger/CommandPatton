@@ -53,16 +53,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Befehl.cs" />
-    <Compile Include="Beleuchtung.cs" />
-    <Compile Include="Heizung.cs" />
-    <Compile Include="LichtAus.cs" />
-    <Compile Include="LichtEin.cs" />
-    <Compile Include="Lichtkommando.cs" />
-    <Compile Include="Raum.cs" />
-    <Compile Include="StandartSteuerelement.cs" />
-    <Compile Include="Steuerelemente.cs" />
-    <Compile Include="Steuerzentrale.cs" />
+    <Compile Include="Befehl\Befehl.cs" />
+    <Compile Include="Befehl\HeizungAus.cs" />
+    <Compile Include="Befehl\HeizungEin.cs" />
+    <Compile Include="Befehl\Heizungskommando.cs" />
+    <Compile Include="Befehl\LichtAus.cs" />
+    <Compile Include="Befehl\LichtEin.cs" />
+    <Compile Include="Befehl\Lichtkommando.cs" />
+    <Compile Include="Steuerelemente\Beleuchtung.cs" />
+    <Compile Include="Steuerelemente\Heizung.cs" />
+    <Compile Include="Verwaltung\Raum.cs" />
+    <Compile Include="Steuerelemente\StandartSteuerelement.cs" />
+    <Compile Include="Steuerelemente\Steuerelemente.cs" />
+    <Compile Include="Verwaltung\Steuerzentrale.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
